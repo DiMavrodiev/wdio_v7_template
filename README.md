@@ -1,0 +1,1 @@
+# wdio_v7_template
