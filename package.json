@@ -8,14 +8,14 @@
     "chrome-docker": "wdio run config/chrome-docker.js --spec",
     "firefox": "wdio run config/firefox.js --spec",
     "firefox-docker": "wdio run config/firefox-docker.js --spec",
-    "edge": "wdio run config/edge.js --spec",
-    "edge-docker": "wdio run config/edge-docker.js --spec",
+    "edge": "wdio run config/msedge.js --spec",
+    "edge-docker": "wdio run config/msedge-docker.js --spec",
     "chrome:suite": "wdio run config/chrome.js --suite",
     "chrome-docker:suite": "wdio run config/chrome-docker.js --suite",
     "firefox:suite": "wdio run config/firefox.js --suite",
     "firefox-docker:suite": "wdio run config/firefox-docker.js --suite",
-    "edge:suite": "wdio run config/edge.js --suite",
-    "edge-docker:suite": "wdio run config/edge-docker.js --suite",
+    "edge:suite": "wdio run config/msedge.js --suite",
+    "edge-docker:suite": "wdio run config/msedge-docker.js --suite",
     "report": "allure generate allure-results --clean && allure open",
     "debug": "wdio repl chrome"
   },
@@ -38,7 +38,16 @@
     "@wdio/local-runner": "^7.5.7",
     "@wdio/mocha-framework": "^7.5.3",
     "@wdio/spec-reporter": "^7.5.7",
-    "chromedriver": "^90.0.0",
-    "wdio-chromedriver-service": "^7.0.0"
+    "@wdio/selenium-standalone-service": "^7.3.1",
+    "@wdio/sync": "^7.0.5",
+    "axios": "^0.21.1",
+    "chromedriver": "^89.0.0",
+    "geckodriver": "^1.22.3",
+    "lodash": "^4.17.21",
+    "msedgedriver": "^87.0.13",
+    "wdio-chromedriver-service": "^7.0.0",
+    "wdio-docker-service": "^3.1.2",
+    "wdio-edgedriver-service": "^1.2.0",
+    "wdio-geckodriver-service": "^1.1.2"
   }
 }
