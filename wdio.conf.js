@@ -9,7 +9,7 @@ exports.config = {
     // WebdriverIO allows it to run your tests in arbitrary locations (e.g. locally or
     // on a remote machine).
     runner: 'local',
-    path: '/wd/hub',
+    //path: '/wd/hub',
     // port: Number(port),
     //hostname: hostname,
     //
@@ -64,7 +64,7 @@ exports.config = {
     baseUrl: url[process.env.ENV] || url.PROD,
     //
     // Default timeout for all waitFor* commands.
-    waitforTimeout: 60000,
+    waitforTimeout: 10000,
     //
     // Default timeout in milliseconds for request
     // if browser driver or grid doesn't send response
