@@ -1,0 +1,40 @@
+version: '2'
+services:
+  hub:
+    image: selenium/hub:3.141.59-gold
+
+  #  firefox:
+  #    image: selenium/standalone-firefox:3.141.59-gold
+  #    shm_size: 2g
+  #    depends_on:
+  #      - hub
+  #    environment:
+  #      HUB_HOST: hub
+
+  chrome:
+    image: selenium/standalone-chrome:3.141.59-gold
+    shm_size: 2g
+    depends_on:
+      - hub
+    environment:
+      HUB_HOST: hub
+
+  test.chrome:
+    build: .
+    depends_on:
+      - chrome
+    environment:
+      - ENV=DEV
+      - PORT=4444
+      - HOST=chrome
+    command: npm run chrome-jenkins login.spec.js
+
+#  test.firefox:
+#    build: .
+#    depends_on:
+#      - firefox
+#    environment:
+#      - ENV=DEV
+#      - PORT=4444
+#      - HOST=firefox
+#    command: npm run test:suite smoke

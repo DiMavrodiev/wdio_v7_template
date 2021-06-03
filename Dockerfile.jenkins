@@ -1,0 +1,8 @@
+FROM alpine:3.11
+
+#Instal npm
+RUN apk update && \
+         apk add  docker-compose docker-cli
+
+RUN mkdir -p /src
+WORKDIR /src
