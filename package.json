@@ -6,6 +6,7 @@
   "scripts": {
     "chrome": "wdio run config/chrome.js --spec",
     "chrome-docker": "wdio run config/chrome-docker.js --spec",
+    "chrome-jenkins": "wdio run config/chrome-jenkins.js --spec",
     "firefox": "wdio run config/firefox.js --spec",
     "firefox-docker": "wdio run config/firefox-docker.js --spec",
     "edge": "wdio run config/msedge.js --spec",
